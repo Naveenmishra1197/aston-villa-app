@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: frontend-application-cont2
-          image: dockeradda1197/new-frontend-application:latest
-          imagePullPolicy: IfNotPresent
+          image: 626316234718.dkr.ecr.ap-south-1.amazonaws.com/astion-app:v1
+          imagePullPolicy: Always
           ports:
             - containerPort: 80
