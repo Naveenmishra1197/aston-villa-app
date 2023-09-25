@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: frontend-app
+spec:
+  selector:
+    matchLabels:
+      app: frontend-app
+  replicas: 2
+  template:
+    metadata:
+      labels:
+        app: frontend-app
+    spec:
+      containers:
+        - name: frontend-application-cont2
+          image: dockeradda1197/new-frontend-application:latest
+          imagePullPolicy: IfNotPresent
+          ports:
+            - containerPort: 80
