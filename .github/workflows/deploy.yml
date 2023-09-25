@@ -6,7 +6,7 @@ on:
     branches: [ "master" ]
 
 jobs:
-  Build_&_Push_image:
+  Build_Push_image_To_ECR:
     runs-on: ubuntu-latest
     steps:
     - name: Checkout code
