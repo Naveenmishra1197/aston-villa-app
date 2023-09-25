@@ -35,7 +35,8 @@ jobs:
       env:
           REGISTRY: ${{ steps.login-ecr.outputs.registry }}
           REPOSITORY: astion-app
-          IMAGE_TAG: ${{ github.sha }}
+         # IMAGE_TAG: ${{ github.sha }}
+          IMAGE_TAG: V1
       run: |
           docker build -t $REGISTRY/$REPOSITORY:$IMAGE_TAG .
           docker push $REGISTRY/$REPOSITORY:$IMAGE_TAG
